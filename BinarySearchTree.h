@@ -78,7 +78,7 @@ int BinarySearchTree<T>::getHeight(TreeNode<T>* tNode) //private
 {
    //DO THIS
 	//Recursion: needs base-case
-	if (tNode = NULL)
+	if (tNode == NULL)
 	{
 		return; //tNode not found, return null
 	}
@@ -102,17 +102,19 @@ template < class T >
 bool BinarySearchTree<T>::isBalanced()
 {
    //DO THIS
-
+	//calls private function instead
+	return isBalanced(root);
 }
 
 template < class T >
 bool BinarySearchTree<T>::isBalanced(TreeNode<T>* tNode)
 {
    //DO THIS
-
-
-
-
+	//most likely similar to getHeight except it just returns true/false
+	if (tNode == NULL)
+		return; //tNode not found, return null
+	
+	
 }
 
 template < class T >
