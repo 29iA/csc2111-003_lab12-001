@@ -69,17 +69,33 @@ template < class T >
 int BinarySearchTree<T>::getHeight() //public
 {
    //DO THIS
-	int height = 0;
-	while ()
+	//calls private function instead
+	return getHeight(getRootNode());
 }
 
 template < class T >
 int BinarySearchTree<T>::getHeight(TreeNode<T>* tNode) //private
 {
    //DO THIS
+	//Recursion: needs base-case
+	if (tNode = NULL)
+	{
+		return; //tNode not found, return null
+	}
 	
-
-
+	else
+	{
+		//create left & right to keep track of the height
+		int left = getHeight(tNode->getLeft());
+		int right = getHeight(tNode->getRight());
+		
+		//do a comparison
+		if (left < right) //more elements in the right
+			return (right + 1);
+			
+		else //more elements in the left
+			return (left + 1);
+	}
 }
 
 template < class T >
